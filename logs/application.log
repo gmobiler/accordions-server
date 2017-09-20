@@ -1,0 +1,11 @@
+2017-09-20 14:05:32,480 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-2 - ApplicationTimer demo: Starting application at 2017-09-20T17:05:32.477Z
+2017-09-20 14:05:33,168 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-2 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    filters.ExampleFilter
+
+2017-09-20 14:05:33,571 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-2 - Application started (Dev)
+2017-09-20 16:00:25,092 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-9 - PUNHETINHA DA VOVO
+2017-09-20 16:00:27,204 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-30 - PUNHETINHA DA VOVO

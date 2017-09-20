@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: com.lightbend.play:jnotify:0.94-play-2:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.lightbend.play/jnotify/jars/jnotify-0.94-play-2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.lightbend.play/jnotify/srcs/jnotify-0.94-play-2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
