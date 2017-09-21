@@ -61,7 +61,8 @@ public class BancoMusicasMemoria {
         //Cria uma lista de musicas jsons txt no disco para simular o banco de musicas no projeto. TODO Levar esses arquivos para dentro dos arquivos do projeto, como será no final
         //Adiciona de maneira contraria de proposito para testar o algoritmo de ordenacao por versaoAtualizacaoBanco
         //Deleta todos os arquivos da pasta de saida
-        boolean recriarJsonsBancoDev = true;
+        boolean recriarJsonsBancoDev = false;
+        Util.log("isProd: " + Environment.simple().isProd());
         if (recriarJsonsBancoDev) {
             Util.deletarTodosArquivosPasta(HomeController.PASTA_SAIDA_JSON);
 

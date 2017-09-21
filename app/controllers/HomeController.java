@@ -38,7 +38,8 @@ public class HomeController extends Controller {
         logger.info("PUNHETINHA DA VOVO");
 
         if (true){
-            return ok(bancoMusicas.mapTracksMusicas.entrySet().iterator().next().getValue()).as("application/json");
+            return ok(Json.toJson(bancoMusicas.listaMetaInfoOrdenadaVersao));
+            //return ok(bancoMusicas.mapTracksMusicas.entrySet().iterator().next().getValue()).as("application/json");
             //return ok(bancoMusicas.listaMetaInfoOrdenadaVersaoAtualizacao.get(0)).as("application/json");
             //return ok(debugGerarJson(1)).as("application/json");
         }
