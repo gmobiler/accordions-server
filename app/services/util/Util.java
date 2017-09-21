@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.Random;
 
 import controllers.HomeController;
 
@@ -82,7 +83,7 @@ public class Util {
         File dir = new File(dirPath);
         File[] files = dir.listFiles();
         for(File file: files) {
-            if (!file.isDirectory()) {
+            if (!file.isDirectory()) {      //nao apaga diretorios pois as vezes crio diretorios como backups
                 file.delete();
             }
         }
@@ -212,6 +213,19 @@ public class Util {
 
     public static String listToString(List l) {
         return l != null ? Arrays.toString(l.toArray()) : "null";
+    }
+
+    public static <T> T getRandomElement(List<T> list) {
+        return list.get(new Random().nextInt(list.size()));
+    }
+
+    public static <T> T getRandomElement(T[] array) {
+        return array[new Random().nextInt(array.length)];
+    }
+
+    public static <T extends Enum<?>> T getRandomEnum(Class<T> clazz) {
+        int x = new Random().nextInt(clazz.getEnumConstants().length);
+        return clazz.getEnumConstants()[x];
     }
 
 }

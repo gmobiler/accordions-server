@@ -2,8 +2,9 @@
   "id": 8,
   "tit": "Eu estou sem amor",
   "comp": "Dorgival Dantas",
+  "cat": 7,
   "v": 1,
-  "vm": 145,
+  "vm": 136,
   "tt": [
     {
       "ts": 1000,

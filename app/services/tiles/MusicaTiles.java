@@ -35,16 +35,19 @@ public class MusicaTiles {
     public long id;
     public String titulo, compositores;
     public int valorMoedas;
+    public CategoriaMusica categoria;
 
     //EXPERIMENTAL - A versão da musica no banco. Usada para atualização da lista de musicas no cliente, usando o algoritmo descrito na pasta AndroidAccordionResources
     public int versaoAtualizacaoBanco;
 
     //construtor completo para json
-    public MusicaTiles(List<Tile> trackTeclado, List<Tile> trackBaixos, List<CifraTile> trackCifras, long id, String titulo, String compositores, int valorMoedas) {
+    //public MusicaTiles(List<Tile> trackTeclado, List<Tile> trackBaixos, List<CifraTile> trackCifras, long id, String titulo, String compositores, int valorMoedas) {
+    public MusicaTiles(List<Tile> trackTeclado, List<Tile> trackBaixos, List<CifraTile> trackCifras, long id, String titulo, String compositores, CategoriaMusica categoria,int valorMoedas) {
         this(trackTeclado, trackBaixos, trackCifras);
         this.id = id;
         this.titulo = titulo;
         this.compositores = compositores;
+        this.categoria = categoria;
         this.valorMoedas = valorMoedas;
     }
 
@@ -70,6 +73,7 @@ public class MusicaTiles {
     public static final String KEY_JSON_ID = "id";
     public static final String KEY_JSON_TITULO = "tit";
     public static final String KEY_JSON_COMPOSITORES = "comp";
+    public static final String KEY_JSON_CATEGORIA= "cat";
     public static final String KEY_JSON_TRACK_TECLADO = "tt";
     public static final String KEY_JSON_TRACK_CIFRAS = "tc";
     public static final String KEY_VERSAO_ATUALIZACAO_BANCO = "v";
@@ -99,6 +103,7 @@ public class MusicaTiles {
             res.addProperty(KEY_JSON_ID, src.id);
             res.addProperty(KEY_JSON_TITULO, src.titulo);
             res.addProperty(KEY_JSON_COMPOSITORES, src.compositores);
+            res.addProperty(KEY_JSON_CATEGORIA, src.categoria.id);
             res.addProperty(KEY_VERSAO_ATUALIZACAO_BANCO,src.versaoAtualizacaoBanco);
 
             //DEBUG - Adiciona o numero de moedas
@@ -135,6 +140,7 @@ public class MusicaTiles {
                 long id = j.get(KEY_JSON_ID).getAsLong();
                 String tit = j.get(KEY_JSON_TITULO).getAsString();
                 String compositores = j.get(KEY_JSON_COMPOSITORES).getAsString();
+                CategoriaMusica categoria = new CategoriaMusica(j.get(KEY_JSON_CATEGORIA).getAsInt());
                 int versaoAtualizacao = j.get(KEY_VERSAO_ATUALIZACAO_BANCO).getAsInt();
 
                 JsonArray ttJArray = j.get(KEY_JSON_TRACK_TECLADO).getAsJsonArray();
@@ -157,7 +163,7 @@ public class MusicaTiles {
                 //List<Tile> trackBaixos = GerenciadorTiles.gerarListaTilesBaixos(trackCifras);
                 List<Tile> trackBaixos = new ArrayList<>();     //FIXME POR ENQUANTO NAO GERO OS BAIXOS POIS MEXE COM MIDI
 
-                MusicaTiles res = new MusicaTiles(trackTeclado, trackBaixos, trackCifras, id, tit, compositores, -1);
+                MusicaTiles res = new MusicaTiles(trackTeclado, trackBaixos, trackCifras, id, tit, compositores,categoria,-1);
                 res.versaoAtualizacaoBanco = versaoAtualizacao;
                 return res;
                 //return new MusicaTiles(trackTeclado, trackBaixos,trackCifras, id, tit, compositores, -1);
@@ -201,27 +207,6 @@ public class MusicaTiles {
 
         return res;
     }
-
-   /* //POJO para objeto usado para criar o json
-    public static class MusicaJSon {
-        public long id;
-        public String titulo, compositores;
-        //public int valorMoedas;           //valor moedas agora não vem direto do json, mas sim de outro lugar (acessado via id) para melhor segurança e facilidade em atualizar preços
-
-        public List<TileJSon> trackTeclado;
-        public List<CifraTile> trackCifras;
-
-        //public String urlPreview;     //acho q o preview será usando samples ao vivo...
-
-
-        public MusicaJSon(long id, String titulo, String compositores, List<TileJSon> trackTeclado, List<CifraTile> trackCifras) {
-            this.id = id;
-            this.titulo = titulo;
-            this.compositores = compositores;
-            this.trackTeclado = trackTeclado;
-            this.trackCifras = trackCifras;
-        }
-    }*/
 
     @Override
     public String toString() {

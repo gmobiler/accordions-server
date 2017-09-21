@@ -4,12 +4,17 @@ package services.tiles;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.databind.util.RawValue;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonToken;
 import com.google.inject.Singleton;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.URL;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
@@ -23,6 +28,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Random;
 
 import controllers.HomeController;
 import play.Environment;
@@ -47,30 +53,6 @@ public class BancoMusicasMemoria {
     public BancoMusicasMemoria() {
         Util.log("Inicializando o banco!");
 
-       /* //Environment.simple().resource("");
-        File file = Environment.simple().getFile("");
-        //InputStream is = Environment.simple().resourceAsStream("private_resources");
-        URL url = Environment.simple().resource("private_resources/bancomusicas");
-        String fileStr = url.getFile();
-        Util.log("fileStr: " + fileStr);
-        File privateResourcesDir = new File(fileStr);
-        Util.log("privateResourcesDir: " + Arrays.toString(privateResourcesDir.list()));
-        String res = null;
-        try {
-            InputStream is = null;
-            FileInputStream fis = (FileInputStream) is;
-            FileChannel fc = fis.getChannel();
-            ByteBuffer bbSeq = ByteBuffer.allocate((int) (fc.size()));
-            fc.read(bbSeq);
-            res = new String(bbSeq.array());
-            fc.close();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        Util.log("file: " + file);
-        Util.log("res: " + res);*/
-
         //listaMetaInfoOrdenadaVersaoAtualizacao = new ArrayList<>();
         listaMetaInfoOrdenadaVersao = new ArrayList<>();
         mapTracksMusicas = new HashMap<>();
@@ -79,18 +61,24 @@ public class BancoMusicasMemoria {
         //Cria uma lista de musicas jsons txt no disco para simular o banco de musicas no projeto. TODO Levar esses arquivos para dentro dos arquivos do projeto, como será no final
         //Adiciona de maneira contraria de proposito para testar o algoritmo de ordenacao por versaoAtualizacaoBanco
         //Deleta todos os arquivos da pasta de saida
-        boolean recriarJsonsBancoDev = false;
+        boolean recriarJsonsBancoDev = true;
         if (recriarJsonsBancoDev) {
             Util.deletarTodosArquivosPasta(HomeController.PASTA_SAIDA_JSON);
 
             int idGen = 1;
             int num = 3;
+            CategoriaMusica[] categorias = CategoriaMusica.values();
+            Random r = new Random();
             for (int i = 0; i < num; i++) {
-                String jSon = debugGerarJson(idGen++, num - i);
+                String jSon = debugGerarJson(idGen++,Util.getRandomElement(categorias), num - i);
             }
             num = 5;
             for (int i = 0; i < num; i++) {
-                String jSon = debugGerarJson(idGen++, 1);
+                String jSon = debugGerarJson(idGen++, Util.getRandomElement(categorias),1);
+            }
+            num = 4;
+            for (int i = 0; i < num; i++) {
+                String jSon = debugGerarJson(idGen++, Util.getRandomElement(categorias),4);
             }
         }
         //Fim Cria
@@ -102,6 +90,9 @@ public class BancoMusicasMemoria {
         File[] jSonsFiles = pastaJSons.listFiles();
         for (File f : jSonsFiles) {
             Util.log("fileName:  " + f.getAbsolutePath());
+
+            testarLerJSonStream(f);
+
             String jSon = Util.readFroFile(f.getAbsolutePath());
 
             adicionarMusicaAoBancoMemoria(jSon);
@@ -111,7 +102,7 @@ public class BancoMusicasMemoria {
         }
 
         //Ordena a lista de meta-infos pela versaoAtualizacaoBanco
- //       Collections.sort(listaMetaInfoOrdenadaVersaoAtualizacao, Comparator.comparingInt(o -> Json.parse(o).get(MusicaTiles.KEY_VERSAO_ATUALIZACAO_BANCO).asInt()));
+        //       Collections.sort(listaMetaInfoOrdenadaVersaoAtualizacao, Comparator.comparingInt(o -> Json.parse(o).get(MusicaTiles.KEY_VERSAO_ATUALIZACAO_BANCO).asInt()));
 
 
         Util.log("ANTES SORT");
@@ -137,12 +128,56 @@ public class BancoMusicasMemoria {
 
     }
 
+    private void testarLerJSonStream(File f) {
+        Util.log("testarLerJSonStream f: " + f + ", f.length(): " + f.length() + " bytes");
+
+        int numite = 0;
+        try {
+            //InputStream stream =getClass().getResourceAsStream(FILENAME);
+            JsonReader jsonReader = new JsonReader(new InputStreamReader(new FileInputStream(f)));
+            Gson gson = new GsonBuilder().create();
+
+            jsonReader.beginObject();
+            while (jsonReader.hasNext()) {
+                numite++;
+                JsonToken nextToken = jsonReader.peek();
+                Util.log("nextToken: " + nextToken.toString());
+
+                if (JsonToken.NAME.equals(nextToken)) {
+                    String name = jsonReader.nextName();
+                    Util.log("name: " + name);
+                } else if (JsonToken.STRING.equals(nextToken)) {
+                    String string = jsonReader.nextString();
+                    Util.log("string: " + string);
+
+                } else if (JsonToken.NUMBER.equals(nextToken)) {
+                    long number = jsonReader.nextLong();
+                    Util.log("number: " + number);
+                }
+                else {
+                    jsonReader.skipValue();
+                }
+
+
+
+                //apenas debug safe loop infimnot
+                if (numite > 1000) {
+                    break;
+                }
+            }
+            jsonReader.close();
+        } catch (Exception e) {
+
+        }
+    }
+
     //cria um json no disco fake
-    private String debugGerarJson(long id, int versaoAtualizacaoBanco) {
+    private String debugGerarJson(long id, CategoriaMusica cat, int versaoAtualizacaoBanco) {
         Util.log("debugGerarJson() id: " + id + ", versaoAtualizacaoBanco: " + versaoAtualizacaoBanco);
         MusicaTiles musicaTiles = GeradorTeste.getFakeGravacaoEuEstouSemAmor();
         musicaTiles.id = id;        //FAKE APENAS TESTE
         musicaTiles.versaoAtualizacaoBanco = versaoAtualizacaoBanco;
+        musicaTiles.categoria = cat;
         GeradorTeste.posProcessarListaTiles(musicaTiles, /*Util.dev ? 100 :*/ 2000);
 
         //Util.log("musicaTiles: " + musicaTiles);
@@ -166,8 +201,8 @@ public class BancoMusicasMemoria {
     //Cria todas as entradas para as diferentes visões do banco em memoria
     public void adicionarMusicaAoBancoMemoria(String json) {
         Util.log("adicionarMusicaAoBancoMemoria()");
-        ObjectNode jsonNodeMeta = (ObjectNode)Json.parse(json);
-        ObjectNode jsonNodeTracks = (ObjectNode)Json.parse(json);     //clone
+        ObjectNode jsonNodeMeta = (ObjectNode) Json.parse(json);
+        ObjectNode jsonNodeTracks = (ObjectNode) Json.parse(json);     //clone
 
         long id = jsonNodeMeta.get(MusicaTiles.KEY_JSON_ID).asLong();
 

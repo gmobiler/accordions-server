@@ -4,7 +4,7 @@
 		module="accordions-server_2.12"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20170920135435"
+		publication="20170921114527"
 	>
 		<description>
 		accordions-server

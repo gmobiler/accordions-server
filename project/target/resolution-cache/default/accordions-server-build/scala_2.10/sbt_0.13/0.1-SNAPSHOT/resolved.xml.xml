@@ -4,7 +4,7 @@
 		module="accordions-server-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20170920140238"
+		publication="20170921114514"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
