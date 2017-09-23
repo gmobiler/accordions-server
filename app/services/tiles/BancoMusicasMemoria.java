@@ -62,7 +62,7 @@ public class BancoMusicasMemoria {
         //Adiciona de maneira contraria de proposito para testar o algoritmo de ordenacao por versaoAtualizacaoBanco
         //Deleta todos os arquivos da pasta de saida
         boolean recriarJsonsBancoDev = false;
-        Util.log("isProd: " + Environment.simple().isProd());
+        Util.log("isProdd: " + Environment.simple().isProd());
         if (recriarJsonsBancoDev) {
             Util.deletarTodosArquivosPasta(HomeController.PASTA_SAIDA_JSON);
 
@@ -70,7 +70,35 @@ public class BancoMusicasMemoria {
             int num = 3;
             CategoriaMusica[] categorias = CategoriaMusica.values();
             Random r = new Random();
+            //Novo banco teste com 300 musicas
+
+            //(50 musicas com ids diferentes e versao 1)        - versão inicial do banco
+            num = 50;
             for (int i = 0; i < num; i++) {
+                debugGerarJson(idGen++,Util.getRandomElement(categorias), 1);
+            }
+            //(10 musicas com ids diferentes e versao 2)        - novas musicas inseridas
+            num = 10;
+            for (int i = 0; i < num; i++) {
+                debugGerarJson(idGen++,Util.getRandomElement(categorias), 2);
+            }
+            //(20 atualizações de musicas do id [10-30] e versao 3)     - atualização de musicas existentes
+            num = 20;
+            for (int i = 0; i < num; i++) {
+                debugGerarJson(i+1,Util.getRandomElement(categorias), 3);
+            }
+            //(5 atualizações de musicas do id [40-45], e adicao de 30 novas musicas -> versao 4)
+            num = 6;        //atualiacoes
+            for (int i = 0; i < num; i++) {
+                debugGerarJson(i + 40,Util.getRandomElement(categorias), 4);
+            }
+            num = 30;        //insercoes
+            for (int i = 0; i < num; i++) {
+                debugGerarJson(idGen++,Util.getRandomElement(categorias), 4);
+            }
+
+
+           /* for (int i = 0; i < num; i++) {
                 String jSon = debugGerarJson(idGen++,Util.getRandomElement(categorias), num - i);
             }
             num = 5;
@@ -80,7 +108,7 @@ public class BancoMusicasMemoria {
             num = 4;
             for (int i = 0; i < num; i++) {
                 String jSon = debugGerarJson(idGen++, Util.getRandomElement(categorias),4);
-            }
+            }*/
         }
         //Fim Cria
 
@@ -92,7 +120,7 @@ public class BancoMusicasMemoria {
         for (File f : jSonsFiles) {
             Util.log("fileName:  " + f.getAbsolutePath());
 
-            testarLerJSonStream(f);
+            carregarMetaInfoMusica(f);
 
             String jSon = Util.readFroFile(f.getAbsolutePath());
 
@@ -129,8 +157,62 @@ public class BancoMusicasMemoria {
 
     }
 
-    private void testarLerJSonStream(File f) {
+    //Lê apenas as meta informações do json no file
+    private MetaInfoMusica carregarMetaInfoMusica(File fJson) {
+        Util.log("carregarMetaInfoMusica() fJson: " + fJson + ", fJson.length(): " + fJson.length() + " bytes");
+
+        MetaInfoMusica res = new MetaInfoMusica();
+
+        int numite = 0;
+        try {
+            JsonReader jsonReader = new JsonReader(new InputStreamReader(new FileInputStream(fJson)));
+            //Gson gson = new GsonBuilder().create();
+
+            jsonReader.beginObject();
+            while (jsonReader.hasNext()) {
+                numite++;
+                String name = jsonReader.nextName();
+                if (name.equals(MusicaTiles.KEY_JSON_ID)) {
+                    res.id = jsonReader.nextLong();
+                }
+                else if (name.equals(MusicaTiles.KEY_JSON_TITULO)) {
+                    res.titulo = jsonReader.nextString();
+                }
+                else if (name.equals(MusicaTiles.KEY_JSON_COMPOSITORES)) {
+                    res.compositores = jsonReader.nextString();
+                }
+                else if (name.equals(MusicaTiles.KEY_JSON_CATEGORIA)) {
+                    res.categoria = new CategoriaMusica(jsonReader.nextInt());
+                }
+                else if (name.equals(MusicaTiles.KEY_VERSAO_ATUALIZACAO_BANCO)) {
+                    res.versaoAtualizacaoBanco = jsonReader.nextInt();
+                }
+                else if (name.equals(MusicaTiles.KEY_VAL_MOEDAS)) {
+                    res.valorMoedas= jsonReader.nextInt();
+                }
+                else{
+                    //Caso nao seja nenhum desses E ASSUMINDO que as tracks estão no final do json, para de ler
+                    break;
+                }
+
+                //apenas debug safe loop infimnot
+                if (numite > 1000) {
+                    break;
+                }
+            }
+            jsonReader.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Util.log("res: " + res);
+
+        return res;
+    }
+
+    private void testarLerJSonStreamINDIRETO(File f) {
         Util.log("testarLerJSonStream f: " + f + ", f.length(): " + f.length() + " bytes");
+
+        MetaInfoMusica res = new MetaInfoMusica();
 
         int numite = 0;
         try {
@@ -176,6 +258,7 @@ public class BancoMusicasMemoria {
     private String debugGerarJson(long id, CategoriaMusica cat, int versaoAtualizacaoBanco) {
         Util.log("debugGerarJson() id: " + id + ", versaoAtualizacaoBanco: " + versaoAtualizacaoBanco);
         MusicaTiles musicaTiles = GeradorTeste.getFakeGravacaoEuEstouSemAmor();
+        //musicaTiles.titulo = id + "_musica_" + cat.name() + "_v-" + versaoAtualizacaoBanco;
         musicaTiles.id = id;        //FAKE APENAS TESTE
         musicaTiles.versaoAtualizacaoBanco = versaoAtualizacaoBanco;
         musicaTiles.categoria = cat;
@@ -192,7 +275,7 @@ public class BancoMusicasMemoria {
 
     //helper para gerar o nome do arquivo com base no id e nome da musica
     public static String gerarFileName(MusicaTiles musicaTiles) {
-        String res = musicaTiles.id + "_" + musicaTiles.titulo
+        String res = (musicaTiles.id + "_" + musicaTiles.titulo + "_v-" + musicaTiles.versaoAtualizacaoBanco)
                 .replace(" ", "_");
         res = Normalizer.normalize(res, Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "");
 

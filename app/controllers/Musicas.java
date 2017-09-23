@@ -117,6 +117,8 @@ public class Musicas extends Controller {
             }
             res.add(m.second);
         }
+
+        Util.log("res.size(): " + res.size());
         return ok(Json.toJson(res));
     }
 

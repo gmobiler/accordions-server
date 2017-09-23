@@ -1,6 +1,6 @@
-2017-09-21 11:53:05,440 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-15 - ApplicationTimer demo: Starting application at 2017-09-21T14:53:05.440Z
-2017-09-21 11:53:05,502 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-15 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
-2017-09-21 11:53:07,676 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-15 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2017-09-23 15:51:52,105 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-2 - ApplicationTimer demo: Starting application at 2017-09-23T18:51:52.104Z
+2017-09-23 15:51:52,143 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-2 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
+2017-09-23 15:51:53,141 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-2 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
@@ -8,12 +8,13 @@
     play.filters.hosts.AllowedHostsFilter
     filters.ExampleFilter
 
-2017-09-21 11:53:08,598 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-15 - Application started (Dev)
-2017-09-21 11:53:08,613 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-15 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
-2017-09-21 12:36:44,604 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-7 - ApplicationTimer demo: Stopping application at 2017-09-21T15:36:44.604Z after 2619s.
-2017-09-21 12:36:45,010 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-7 - ApplicationTimer demo: Starting application at 2017-09-21T15:36:45.010Z
-2017-09-21 12:36:45,010 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-7 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
-2017-09-21 12:36:45,941 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-7 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2017-09-23 15:51:53,554 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-2 - Application started (Dev)
+2017-09-23 15:51:53,566 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-2 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
+2017-09-23 15:51:53,581 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-7 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
+2017-09-23 18:53:51,855 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-26 - ApplicationTimer demo: Stopping application at 2017-09-23T21:53:51.854Z after 10919s.
+2017-09-23 18:53:52,109 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-26 - ApplicationTimer demo: Starting application at 2017-09-23T21:53:52.109Z
+2017-09-23 18:53:52,116 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-26 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
+2017-09-23 18:53:53,686 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-26 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
@@ -21,12 +22,13 @@
     play.filters.hosts.AllowedHostsFilter
     filters.ExampleFilter
 
-2017-09-21 12:36:45,956 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-7 - Application started (Dev)
-2017-09-21 12:36:45,988 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-7 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
-2017-09-21 12:37:07,870 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-26 - ApplicationTimer demo: Stopping application at 2017-09-21T15:37:07.870Z after 22s.
-2017-09-21 12:37:08,230 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-26 - ApplicationTimer demo: Starting application at 2017-09-21T15:37:08.230Z
-2017-09-21 12:37:08,245 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-26 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
-2017-09-21 12:37:09,020 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-26 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2017-09-23 18:53:53,712 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-26 - Application started (Dev)
+2017-09-23 18:53:53,715 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-26 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
+2017-09-23 18:53:53,921 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-26 - PUNHETINHA DA VOVO
+2017-09-23 19:01:17,216 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-40 - ApplicationTimer demo: Stopping application at 2017-09-23T22:01:17.215Z after 445s.
+2017-09-23 19:01:17,532 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-40 - ApplicationTimer demo: Starting application at 2017-09-23T22:01:17.532Z
+2017-09-23 19:01:17,539 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-40 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
+2017-09-23 19:01:17,746 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-40 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
@@ -34,255 +36,5 @@
     play.filters.hosts.AllowedHostsFilter
     filters.ExampleFilter
 
-2017-09-21 12:37:09,035 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-26 - Application started (Dev)
-2017-09-21 12:37:09,035 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-26 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
-2017-09-21 13:58:44,807 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-28 - ApplicationTimer demo: Stopping application at 2017-09-21T16:58:44.805Z after 4896s.
-2017-09-21 13:58:45,050 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-28 - ApplicationTimer demo: Starting application at 2017-09-21T16:58:45.050Z
-2017-09-21 13:58:45,058 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-28 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
-2017-09-21 13:58:46,994 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-28 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2017-09-21 13:58:47,728 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-28 - 
-
-! @75d42fngd - Internal server error, for (GET) [/musicas/checkforupdates/3] ->
- 
-play.api.UnexpectedException: Unexpected exception[ProvisionException: Unable to provision, see the following errors:
-
-1) Error injecting constructor, java.lang.NullPointerException
-  at services.tiles.BancoMusicasMemoria.<init>(BancoMusicasMemoria.java:52)
-  at services.tiles.BancoMusicasMemoria.class(BancoMusicasMemoria.java:45)
-  while locating services.tiles.BancoMusicasMemoria
-    for the 1st parameter of controllers.Musicas.<init>(Musicas.java:30)
-  while locating controllers.Musicas
-    for the 2nd parameter of router.Routes.<init>(Routes.scala:43)
-  while locating router.Routes
-  while locating play.api.inject.RoutesProvider
-  while locating play.api.routing.Router
-    for the 1st parameter of play.api.http.JavaCompatibleHttpRequestHandler.<init>(HttpRequestHandler.scala:222)
-  while locating play.api.http.JavaCompatibleHttpRequestHandler
-  while locating play.api.http.HttpRequestHandler
-    for the 6th parameter of play.api.DefaultApplication.<init>(Application.scala:236)
-  at play.api.DefaultApplication.class(Application.scala:235)
-  while locating play.api.DefaultApplication
-  while locating play.api.Application
-
-2) Error injecting constructor, java.lang.NullPointerException
-  at services.tiles.BancoMusicasMemoria.<init>(BancoMusicasMemoria.java:52)
-  at services.tiles.BancoMusicasMemoria.class(BancoMusicasMemoria.java:45)
-  while locating services.tiles.BancoMusicasMemoria
-    for the 1st parameter of controllers.HomeController.<init>(HomeController.java:29)
-  while locating controllers.HomeController
-    for the 3rd parameter of router.Routes.<init>(Routes.scala:43)
-  while locating router.Routes
-  while locating play.api.inject.RoutesProvider
-  while locating play.api.routing.Router
-    for the 1st parameter of play.api.http.JavaCompatibleHttpRequestHandler.<init>(HttpRequestHandler.scala:222)
-  while locating play.api.http.JavaCompatibleHttpRequestHandler
-  while locating play.api.http.HttpRequestHandler
-    for the 6th parameter of play.api.DefaultApplication.<init>(Application.scala:236)
-  at play.api.DefaultApplication.class(Application.scala:235)
-  while locating play.api.DefaultApplication
-  while locating play.api.Application
-
-2 errors]
-	at play.core.server.DevServerStart$$anon$1.reload(DevServerStart.scala:186)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:124)
-	at play.core.server.AkkaHttpServer.modelConversion(AkkaHttpServer.scala:183)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:189)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$3(AkkaHttpServer.scala:106)
-	at play.core.server.AkkaHttpServer$$Lambda$374/19669910.apply(Unknown Source)
-	at akka.stream.impl.fusing.MapAsync$$anon$23.onPush(Ops.scala:1172)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:499)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:462)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:368)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:571)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:457)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:546)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:725)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:740)
-	at akka.actor.Actor.aroundReceive(Actor.scala:514)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:512)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:650)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: com.google.inject.ProvisionException: Unable to provision, see the following errors:
-
-1) Error injecting constructor, java.lang.NullPointerException
-  at services.tiles.BancoMusicasMemoria.<init>(BancoMusicasMemoria.java:52)
-  at services.tiles.BancoMusicasMemoria.class(BancoMusicasMemoria.java:45)
-  while locating services.tiles.BancoMusicasMemoria
-    for the 1st parameter of controllers.Musicas.<init>(Musicas.java:30)
-  while locating controllers.Musicas
-    for the 2nd parameter of router.Routes.<init>(Routes.scala:43)
-  while locating router.Routes
-  while locating play.api.inject.RoutesProvider
-  while locating play.api.routing.Router
-    for the 1st parameter of play.api.http.JavaCompatibleHttpRequestHandler.<init>(HttpRequestHandler.scala:222)
-  while locating play.api.http.JavaCompatibleHttpRequestHandler
-  while locating play.api.http.HttpRequestHandler
-    for the 6th parameter of play.api.DefaultApplication.<init>(Application.scala:236)
-  at play.api.DefaultApplication.class(Application.scala:235)
-  while locating play.api.DefaultApplication
-  while locating play.api.Application
-
-2) Error injecting constructor, java.lang.NullPointerException
-  at services.tiles.BancoMusicasMemoria.<init>(BancoMusicasMemoria.java:52)
-  at services.tiles.BancoMusicasMemoria.class(BancoMusicasMemoria.java:45)
-  while locating services.tiles.BancoMusicasMemoria
-    for the 1st parameter of controllers.HomeController.<init>(HomeController.java:29)
-  while locating controllers.HomeController
-    for the 3rd parameter of router.Routes.<init>(Routes.scala:43)
-  while locating router.Routes
-  while locating play.api.inject.RoutesProvider
-  while locating play.api.routing.Router
-    for the 1st parameter of play.api.http.JavaCompatibleHttpRequestHandler.<init>(HttpRequestHandler.scala:222)
-  while locating play.api.http.JavaCompatibleHttpRequestHandler
-  while locating play.api.http.HttpRequestHandler
-    for the 6th parameter of play.api.DefaultApplication.<init>(Application.scala:236)
-  at play.api.DefaultApplication.class(Application.scala:235)
-  while locating play.api.DefaultApplication
-  while locating play.api.Application
-
-2 errors
-	at com.google.inject.internal.InjectorImpl$2.get(InjectorImpl.java:1028)
-	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1054)
-	at play.api.inject.guice.GuiceInjector.instanceOf(GuiceInjectorBuilder.scala:409)
-	at play.api.inject.guice.GuiceInjector.instanceOf(GuiceInjectorBuilder.scala:404)
-	at play.api.inject.ContextClassLoaderInjector.$anonfun$instanceOf$2(Injector.scala:117)
-	at play.api.inject.ContextClassLoaderInjector$$Lambda$628/1200480864.apply(Unknown Source)
-	at play.api.inject.ContextClassLoaderInjector.withContext(Injector.scala:126)
-	at play.api.inject.ContextClassLoaderInjector.instanceOf(Injector.scala:117)
-	at play.api.inject.guice.GuiceApplicationBuilder.build(GuiceApplicationBuilder.scala:137)
-	at play.api.inject.guice.GuiceApplicationLoader.load(GuiceApplicationLoader.scala:21)
-	at play.core.server.DevServerStart$$anon$1.$anonfun$reload$3(DevServerStart.scala:174)
-	at play.core.server.DevServerStart$$anon$1$$Lambda$548/1501890297.apply(Unknown Source)
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
-	at play.core.server.DevServerStart$$anon$1.reload(DevServerStart.scala:171)
-	... 26 common frames omitted
-Caused by: java.lang.NullPointerException: null
-	at services.tiles.MusicaTiles$1.serialize(MusicaTiles.java:106)
-	at services.tiles.MusicaTiles$1.serialize(MusicaTiles.java:82)
-	at com.google.gson.internal.bind.TreeTypeAdapter.write(TreeTypeAdapter.java:81)
-	at com.google.gson.Gson.toJson(Gson.java:669)
-	at com.google.gson.Gson.toJson(Gson.java:648)
-	at com.google.gson.Gson.toJson(Gson.java:603)
-	at com.google.gson.Gson.toJson(Gson.java:583)
-	at services.tiles.MusicaTiles.toJson(MusicaTiles.java:206)
-	at services.tiles.MusicaTiles.toJson(MusicaTiles.java:183)
-	at services.tiles.BancoMusicasMemoria.debugGerarJson(BancoMusicasMemoria.java:177)
-	at services.tiles.BancoMusicasMemoria.<init>(BancoMusicasMemoria.java:70)
-	at services.tiles.BancoMusicasMemoria$$FastClassByGuice$$660b887b.newInstance(<generated>)
-	at com.google.inject.internal.DefaultConstructionProxyFactory$FastClassProxy.newInstance(DefaultConstructionProxyFactory.java:89)
-	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:111)
-	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:90)
-	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:268)
-	at com.google.inject.internal.ProviderToInternalFactoryAdapter$1.call(ProviderToInternalFactoryAdapter.java:46)
-	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1092)
-	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
-	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:194)
-	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:41)
-	at com.google.inject.internal.SingleParameterInjector.inject(SingleParameterInjector.java:38)
-	at com.google.inject.internal.SingleParameterInjector.getAll(SingleParameterInjector.java:62)
-	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:110)
-	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:90)
-	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:268)
-	at com.google.inject.internal.SingleParameterInjector.inject(SingleParameterInjector.java:38)
-	at com.google.inject.internal.SingleParameterInjector.getAll(SingleParameterInjector.java:62)
-	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:110)
-	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:90)
-	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:268)
-	at com.google.inject.internal.InjectorImpl$2$1.call(InjectorImpl.java:1019)
-	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1092)
-	at com.google.inject.internal.InjectorImpl$2.get(InjectorImpl.java:1015)
-	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1054)
-	at play.api.inject.guice.GuiceInjector.instanceOf(GuiceInjectorBuilder.scala:409)
-	at play.api.inject.ContextClassLoaderInjector.$anonfun$instanceOf$3(Injector.scala:118)
-	at play.api.inject.ContextClassLoaderInjector$$Lambda$644/1988325623.apply(Unknown Source)
-	at play.api.inject.ContextClassLoaderInjector.withContext(Injector.scala:126)
-	at play.api.inject.ContextClassLoaderInjector.instanceOf(Injector.scala:118)
-	at play.api.inject.RoutesProvider.$anonfun$get$2(BuiltinModule.scala:104)
-	at play.api.inject.RoutesProvider$$Lambda$643/359568859.apply(Unknown Source)
-	at scala.Option.fold(Option.scala:158)
-	at play.api.inject.RoutesProvider.get$lzycompute(BuiltinModule.scala:104)
-	at play.api.inject.RoutesProvider.get(BuiltinModule.scala:100)
-	at play.api.inject.RoutesProvider.get(BuiltinModule.scala:99)
-	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:81)
-	at com.google.inject.internal.BoundProviderFactory.provision(BoundProviderFactory.java:72)
-	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61)
-	at com.google.inject.internal.BoundProviderFactory.get(BoundProviderFactory.java:62)
-	at com.google.inject.internal.SingleParameterInjector.inject(SingleParameterInjector.java:38)
-	at com.google.inject.internal.SingleParameterInjector.getAll(SingleParameterInjector.java:62)
-	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:110)
-	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:90)
-	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:268)
-	at com.google.inject.internal.FactoryProxy.get(FactoryProxy.java:56)
-	at com.google.inject.internal.SingleParameterInjector.inject(SingleParameterInjector.java:38)
-	at com.google.inject.internal.SingleParameterInjector.getAll(SingleParameterInjector.java:62)
-	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:110)
-	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:90)
-	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:268)
-	at com.google.inject.internal.ProviderToInternalFactoryAdapter$1.call(ProviderToInternalFactoryAdapter.java:46)
-	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1092)
-	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
-	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:194)
-	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:41)
-	at com.google.inject.internal.FactoryProxy.get(FactoryProxy.java:56)
-	at com.google.inject.internal.InjectorImpl$2$1.call(InjectorImpl.java:1019)
-	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1085)
-	at com.google.inject.internal.InjectorImpl$2.get(InjectorImpl.java:1015)
-	... 39 common frames omitted
-2017-09-21 14:05:04,916 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-33 - ApplicationTimer demo: Stopping application at 2017-09-21T17:05:04.915Z after 379s.
-2017-09-21 14:05:05,090 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-33 - ApplicationTimer demo: Starting application at 2017-09-21T17:05:05.090Z
-2017-09-21 14:05:05,095 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-33 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
-2017-09-21 14:05:06,049 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-33 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2017-09-21 14:05:06,061 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-33 - Application started (Dev)
-2017-09-21 14:05:06,065 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-33 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
-2017-09-21 14:06:25,802 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-33 - ApplicationTimer demo: Stopping application at 2017-09-21T17:06:25.802Z after 80s.
-2017-09-21 14:06:25,920 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-33 - ApplicationTimer demo: Starting application at 2017-09-21T17:06:25.920Z
-2017-09-21 14:06:25,926 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-33 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
-2017-09-21 14:06:26,842 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-33 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2017-09-21 14:06:26,859 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-33 - Application started (Dev)
-2017-09-21 14:06:26,862 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-33 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
-2017-09-21 14:16:45,787 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-47 - PUNHETINHA DA VOVO
-2017-09-21 14:16:50,980 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-50 - PUNHETINHA DA VOVO
-2017-09-21 14:16:53,711 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-50 - PUNHETINHA DA VOVO
-2017-09-21 14:18:09,316 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-41 - ApplicationTimer demo: Stopping application at 2017-09-21T17:18:09.316Z after 704s.
-2017-09-21 14:18:09,835 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-41 - ApplicationTimer demo: Starting application at 2017-09-21T17:18:09.835Z
-2017-09-21 14:18:09,840 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-41 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
-2017-09-21 14:18:10,367 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-41 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2017-09-21 14:18:10,387 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-41 - Application started (Dev)
-2017-09-21 14:18:10,430 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-41 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
-2017-09-21 14:18:10,639 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-41 - PUNHETINHA DA VOVO
+2017-09-23 19:01:17,764 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-40 - Application started (Dev)
+2017-09-23 19:01:17,832 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-40 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead

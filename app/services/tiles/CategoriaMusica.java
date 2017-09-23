@@ -80,8 +80,12 @@ public class CategoriaMusica {
     }
 
     public String name() {
-        Util.log("name: " + name + " id: " + id);
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return name();
     }
 }
 /*
