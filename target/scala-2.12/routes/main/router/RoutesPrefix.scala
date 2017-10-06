@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:G:/Projetos/PlayFramework/accordions-server/conf/routes
-// @DATE:Wed Sep 20 14:05:10 GMT-03:00 2017
+// @DATE:Wed Oct 04 18:37:11 GMT-03:00 2017
 
 
 package router {

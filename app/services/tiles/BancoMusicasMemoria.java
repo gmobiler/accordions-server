@@ -61,7 +61,7 @@ public class BancoMusicasMemoria {
         //Cria uma lista de musicas jsons txt no disco para simular o banco de musicas no projeto. TODO Levar esses arquivos para dentro dos arquivos do projeto, como será no final
         //Adiciona de maneira contraria de proposito para testar o algoritmo de ordenacao por versaoAtualizacaoBanco
         //Deleta todos os arquivos da pasta de saida
-        boolean recriarJsonsBancoDev = false;
+        boolean recriarJsonsBancoDev = true;
         Util.log("isProdd: " + Environment.simple().isProd());
         if (recriarJsonsBancoDev) {
             Util.deletarTodosArquivosPasta(HomeController.PASTA_SAIDA_JSON);
@@ -82,10 +82,10 @@ public class BancoMusicasMemoria {
             for (int i = 0; i < num; i++) {
                 debugGerarJson(idGen++,Util.getRandomElement(categorias), 2);
             }
-            //(20 atualizações de musicas do id [10-30] e versao 3)     - atualização de musicas existentes
+            //(20 atualizações de musicas do id [11-30] e versao 3)     - atualização de musicas existentes
             num = 20;
             for (int i = 0; i < num; i++) {
-                debugGerarJson(i+1,Util.getRandomElement(categorias), 3);
+                debugGerarJson(i+11,Util.getRandomElement(categorias), 3);
             }
             //(5 atualizações de musicas do id [40-45], e adicao de 30 novas musicas -> versao 4)
             num = 6;        //atualiacoes

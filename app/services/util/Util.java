@@ -38,6 +38,7 @@ public class Util {
     }
 
     public static boolean hideLog = false;
+    public static boolean hideLogProd = false;      //logs de producao são importantes e nunca devem ser ocultos
 
     //private static final org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger("application");
 
@@ -45,17 +46,22 @@ public class Util {
     public static String getSpaces(int spaces) {
         return CharBuffer.allocate(spaces).toString().replace('\0', ' ');
     }
+
+    public static void logProd(String msg){
+        if (hideLogProd) {
+            return;
+        }
+
+        logForce(msg);
+    }
     public static void log(String msg) {
         if (hideLog) {
             return;
         }
 
-        //teste logger play
-        /*
-        if (true){
-            return;
-        }*/
-
+        logForce(msg);
+    }
+    private static void logForce(String msg){
         try {
             String callerCallerClassName = KDebug.getCallerCallerClassName();
 
@@ -69,14 +75,6 @@ public class Util {
         } catch (Exception e) {
             System.out.println("TAG nao encontrada" + msg);
         }
-        //Log.v(Util.appIdAtual.nome,msg);
-    }
-    public static void log2(String msg){
-        if (hideLog){
-            return;
-        }
-        //logger.info("ApplicationTimer demo: Stopping application at " + clock.instant() + " after " + runningTime + "s.");
-        System.out.println(msg);
     }
 
     public static void deletarTodosArquivosPasta(String dirPath) {
@@ -226,6 +224,39 @@ public class Util {
     public static <T extends Enum<?>> T getRandomEnum(Class<T> clazz) {
         int x = new Random().nextInt(clazz.getEnumConstants().length);
         return clazz.getEnumConstants()[x];
+    }
+
+
+    public static void lancarExcecao(String s) {
+        //como no servidor é perigoso lancar excecao, só lanço se for debug, em prod apenas logo
+        if (play.Environment.simple().isDev()) {
+            throw new RuntimeException(s);
+        }
+        else{
+            Util.log("lancarExcecao() s: " + s);
+        }
+    }
+
+    //forma a string randomica
+    public static String gerarStrRandom(List<String> charsPossiveis, int tamStr) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < tamStr; i++) {
+            String nextChar = Util.getRandomElement(charsPossiveis);
+            sb.append(nextChar);
+        }
+
+        return sb.toString();
+    }
+    public static int randomInt(int min, int max) {
+        return getRandom().nextInt((max - min) + 1) + min;
+    }
+    private static Random r;
+
+    public static Random getRandom() {
+        if (r == null) {
+            r = new Random();
+        }
+        return r;
     }
 
 }

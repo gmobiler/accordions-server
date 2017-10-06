@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:G:/Projetos/PlayFramework/accordions-server/conf/routes
-// @DATE:Wed Sep 20 14:05:10 GMT-03:00 2017
+// @DATE:Wed Oct 04 18:37:11 GMT-03:00 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -12,7 +12,7 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers.javascript {
 
-  // @LINE:28
+  // @LINE:41
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -20,7 +20,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:28
+    // @LINE:41
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
@@ -32,7 +32,77 @@ package controllers.javascript {
   
   }
 
-  // @LINE:23
+  // @LINE:9
+  class ReverseAuth(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:9
+    def loginSecure: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Auth.loginSecure",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "loginsecure"})
+        }
+      """
+    )
+  
+    // @LINE:11
+    def obterMusiquinhas: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Auth.obterMusiquinhas",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "obtermusiquinhas"})
+        }
+      """
+    )
+  
+    // @LINE:14
+    def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Auth.logout",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "logout"})
+        }
+      """
+    )
+  
+    // @LINE:13
+    def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Auth.login",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:6
+  class ReverseServicesController(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:6
+    def services: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.ServicesController.services",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "services"})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:36
   class ReverseCountController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -40,7 +110,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:23
+    // @LINE:36
     def count: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.CountController.count",
       """
@@ -52,7 +122,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:6
+  // @LINE:19
   class ReverseMusicas(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -60,7 +130,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:18
+    // @LINE:31
     def valorMoedas: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Musicas.valorMoedas",
       """
@@ -70,7 +140,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:9
+    // @LINE:22
     def meta: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Musicas.meta",
       """
@@ -80,7 +150,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:6
+    // @LINE:19
     def get: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Musicas.get",
       """
@@ -90,7 +160,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:15
+    // @LINE:28
     def tracks: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Musicas.tracks",
       """
@@ -100,7 +170,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:12
+    // @LINE:25
     def checkForUpdates: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Musicas.checkForUpdates",
       """
@@ -112,7 +182,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:21
+  // @LINE:16
   class ReverseHomeController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -120,7 +190,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:21
+    // @LINE:34
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.index",
       """
@@ -130,9 +200,19 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:16
+    def testCookie: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.testCookie",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "testcookie"})
+        }
+      """
+    )
+  
   }
 
-  // @LINE:25
+  // @LINE:38
   class ReverseAsyncController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -140,7 +220,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:25
+    // @LINE:38
     def message: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.AsyncController.message",
       """

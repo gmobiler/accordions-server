@@ -4,7 +4,7 @@
 		module="accordions-server$sources_2.12"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20170920140158"
+		publication="20170930152934"
 	/>
 	<configurations>
 		<conf name="universal" visibility="public" description=""/>

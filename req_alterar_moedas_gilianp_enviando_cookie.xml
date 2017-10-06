@@ -1,0 +1,37 @@
+<RestClientRequest>
+  <option name="biscuits">
+    <list />
+  </option>
+  <option name="httpMethod" value="POST" />
+  <option name="urlBase" value="http://localhost:9000" />
+  <option name="urlPath" value="/services" />
+  <option name="headers">
+    <list>
+      <KeyValuePair>
+        <option name="key" value="Accept" />
+        <option name="value" value="*/*" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Cache-Control" />
+        <option name="value" value="no-cache" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Content-Type" />
+        <option name="value" value="text/plain" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Cookie" />
+        <option name="value" value="PLAY_SESSION=eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7InVzZXJzZXNzaW9uIjoiZ2lsaWFucEBnbWFpbC5jb20ifSwibmJmIjoxNTA3MjUxNzcwLCJpYXQiOjE1MDcyNTE3NzB9.SdKc8NK3j5s1puE35l8_BmQFO7d-4_clzo2dUJreGU0; SameSite=Lax; Path=/; HTTPOnly;SV=V}5AA|9|ZD; Path=/; Secure" />
+      </KeyValuePair>
+    </list>
+  </option>
+  <option name="parameters">
+    <list />
+  </option>
+  <option name="parametersEnabled" value="true" />
+  <option name="haveTextToSend" value="true" />
+  <option name="haveFileToSend" value="false" />
+  <option name="isFileUpload" value="false" />
+  <option name="textToSend" value="DuWc?lnqvSE4{3YWzc5*+uUjqYm+uUjKpOHxSTKpOlPob|ZDLr}dIE|cbxY!QZcbxYIzu+uUjIE|6Hy#!QZMBk}KpON0CJKpO6Hy#|9BakgitjwKVQ-u}l3YWzqYmlPob|i*nqvShPQe6W68FIv#|j" />
+  <option name="filesToSend" value="" />
+</RestClientRequest>

@@ -13,6 +13,7 @@
         <entry key="root">
           <value>
             <ProjectSettingsEntry>
+              <option name="sourceDir" value="G:\Projetos\PlayFramework\accordions-server\app" />
               <option name="confDir" value="G:\Projetos\PlayFramework\accordions-server\app" />
               <option name="templateImports">
                 <list>

@@ -1,40 +1,21 @@
-2017-09-23 15:51:52,105 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-2 - ApplicationTimer demo: Starting application at 2017-09-23T18:51:52.104Z
-2017-09-23 15:51:52,143 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-2 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
-2017-09-23 15:51:53,141 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-2 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2017-10-06 12:41:00,041 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-12 - ApplicationTimer demo: Starting application at 2017-10-06T15:41:00.041Z
+2017-10-06 12:41:00,073 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-12 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
+2017-10-06 12:41:04,043 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-12 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
-    play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    play.filters.hosts.AllowedHostsFilter
     filters.ExampleFilter
 
-2017-09-23 15:51:53,554 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-2 - Application started (Dev)
-2017-09-23 15:51:53,566 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-2 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
-2017-09-23 15:51:53,581 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-7 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
-2017-09-23 18:53:51,855 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-26 - ApplicationTimer demo: Stopping application at 2017-09-23T21:53:51.854Z after 10919s.
-2017-09-23 18:53:52,109 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-26 - ApplicationTimer demo: Starting application at 2017-09-23T21:53:52.109Z
-2017-09-23 18:53:52,116 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-26 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
-2017-09-23 18:53:53,686 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-26 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2017-10-06 12:41:04,479 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-12 - Application started (Dev)
+2017-10-06 12:41:04,495 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-12 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
+2017-10-06 14:02:14,973 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-12 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
+2017-10-06 14:04:04,500 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-23 - ApplicationTimer demo: Stopping application at 2017-10-06T17:04:04.500Z after 4984s.
+2017-10-06 14:04:04,688 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-23 - ApplicationTimer demo: Starting application at 2017-10-06T17:04:04.688Z
+2017-10-06 14:04:04,703 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-23 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
+2017-10-06 14:04:05,610 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-23 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
-    play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    play.filters.hosts.AllowedHostsFilter
     filters.ExampleFilter
 
-2017-09-23 18:53:53,712 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-26 - Application started (Dev)
-2017-09-23 18:53:53,715 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-26 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
-2017-09-23 18:53:53,921 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-26 - PUNHETINHA DA VOVO
-2017-09-23 19:01:17,216 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-40 - ApplicationTimer demo: Stopping application at 2017-09-23T22:01:17.215Z after 445s.
-2017-09-23 19:01:17,532 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-40 - ApplicationTimer demo: Starting application at 2017-09-23T22:01:17.532Z
-2017-09-23 19:01:17,539 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-40 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
-2017-09-23 19:01:17,746 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-40 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2017-09-23 19:01:17,764 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-40 - Application started (Dev)
-2017-09-23 19:01:17,832 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-40 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
+2017-10-06 14:04:05,657 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-23 - Application started (Dev)
+2017-10-06 14:04:05,657 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-23 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead
+2017-10-06 14:51:18,394 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-37 - application.conf @ file:/G:/Projetos/PlayFramework/accordions-server/target/scala-2.12/classes/application.conf: 2: play.crypto.secret is deprecated, use play.http.secret.key instead

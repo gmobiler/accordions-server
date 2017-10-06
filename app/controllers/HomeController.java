@@ -115,8 +115,30 @@ public class HomeController extends Controller {
 
     }
 
+    String SESSION_KEY = "oi_sou_a_chave";
+    public Result testCookie() {
+        //Cria o "banco" de musicas para ficar na memoria
+        Util.log("testCookie()");
 
-    public Result getInfoMusica(long id) {
-        return ok(index.render("Your new application is ready. ALOKA"));
+        String valor = session(SESSION_KEY);
+        if(valor != null) {
+            Util.log("Opa! Veio o biscoito do cliente! valor: " + valor);
+            return ok("Opa! Veio o biscoito do cliente! valor: " + valor);
+        } else {
+            Util.log("NÃO VEIO NADA, colocando um biscoitinho dentro");
+            session(SESSION_KEY, "biscoito");
+            return ok("NÃO VEIO NADA, colocando um biscoitinho dentro");
+        }
+
+        //session("oi_sou_a_chave","sou um biscoitinho");
+
+        //return ok("Teste Cookie");
     }
+
+
+
+
+
+
+
 }

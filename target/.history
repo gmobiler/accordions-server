@@ -6,3 +6,11 @@ compile
 run
 ~run
 run
+compile
+run
+stop
+run
+compile
+run
+playGenerateSecret
+run

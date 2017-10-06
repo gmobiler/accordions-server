@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:G:/Projetos/PlayFramework/accordions-server/conf/routes
-// @DATE:Wed Sep 20 14:05:10 GMT-03:00 2017
+// @DATE:Wed Oct 04 18:37:11 GMT-03:00 2017
 
 package router
 
@@ -16,35 +16,43 @@ import _root_.play.libs.F
 class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:6
-  Musicas_3: controllers.Musicas,
-  // @LINE:21
+  ServicesController_3: controllers.ServicesController,
+  // @LINE:9
+  Auth_4: controllers.Auth,
+  // @LINE:16
   HomeController_1: controllers.HomeController,
-  // @LINE:23
+  // @LINE:19
+  Musicas_5: controllers.Musicas,
+  // @LINE:36
   CountController_0: controllers.CountController,
-  // @LINE:25
+  // @LINE:38
   AsyncController_2: controllers.AsyncController,
-  // @LINE:28
-  Assets_4: controllers.Assets,
+  // @LINE:41
+  Assets_6: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
 
    @javax.inject.Inject()
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:6
-    Musicas_3: controllers.Musicas,
-    // @LINE:21
+    ServicesController_3: controllers.ServicesController,
+    // @LINE:9
+    Auth_4: controllers.Auth,
+    // @LINE:16
     HomeController_1: controllers.HomeController,
-    // @LINE:23
+    // @LINE:19
+    Musicas_5: controllers.Musicas,
+    // @LINE:36
     CountController_0: controllers.CountController,
-    // @LINE:25
+    // @LINE:38
     AsyncController_2: controllers.AsyncController,
-    // @LINE:28
-    Assets_4: controllers.Assets
-  ) = this(errorHandler, Musicas_3, HomeController_1, CountController_0, AsyncController_2, Assets_4, "/")
+    // @LINE:41
+    Assets_6: controllers.Assets
+  ) = this(errorHandler, ServicesController_3, Auth_4, HomeController_1, Musicas_5, CountController_0, AsyncController_2, Assets_6, "/")
 
   def withPrefix(prefix: String): Routes = {
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, Musicas_3, HomeController_1, CountController_0, AsyncController_2, Assets_4, prefix)
+    new Routes(errorHandler, ServicesController_3, Auth_4, HomeController_1, Musicas_5, CountController_0, AsyncController_2, Assets_6, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -52,6 +60,12 @@ class Routes(
   }
 
   def documentation = List(
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """services""", """controllers.ServicesController.services"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """loginsecure""", """controllers.Auth.loginSecure"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """obtermusiquinhas""", """controllers.Auth.obterMusiquinhas"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.Auth.login"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """logout""", """controllers.Auth.logout"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """testcookie""", """controllers.HomeController.testCookie"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """musicas/""" + "$" + """id<[^/]+>""", """controllers.Musicas.get(id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """musicas/meta/""" + "$" + """id<[^/]+>""", """controllers.Musicas.meta(id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """musicas/checkforupdates/""" + "$" + """versaoAtualizacaoBancoCliente<[^/]+>""", """controllers.Musicas.checkForUpdates(versaoAtualizacaoBancoCliente:Int)"""),
@@ -69,11 +83,119 @@ class Routes(
 
 
   // @LINE:6
-  private[this] lazy val controllers_Musicas_get0_route = Route("GET",
+  private[this] lazy val controllers_ServicesController_services0_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("services")))
+  )
+  private[this] lazy val controllers_ServicesController_services0_invoker = createInvoker(
+    ServicesController_3.services,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.ServicesController",
+      "services",
+      Nil,
+      "POST",
+      this.prefix + """services""",
+      """Métodos de service""",
+      Seq()
+    )
+  )
+
+  // @LINE:9
+  private[this] lazy val controllers_Auth_loginSecure1_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("loginsecure")))
+  )
+  private[this] lazy val controllers_Auth_loginSecure1_invoker = createInvoker(
+    Auth_4.loginSecure,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Auth",
+      "loginSecure",
+      Nil,
+      "POST",
+      this.prefix + """loginsecure""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:11
+  private[this] lazy val controllers_Auth_obterMusiquinhas2_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("obtermusiquinhas")))
+  )
+  private[this] lazy val controllers_Auth_obterMusiquinhas2_invoker = createInvoker(
+    Auth_4.obterMusiquinhas,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Auth",
+      "obterMusiquinhas",
+      Nil,
+      "GET",
+      this.prefix + """obtermusiquinhas""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:13
+  private[this] lazy val controllers_Auth_login3_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("login")))
+  )
+  private[this] lazy val controllers_Auth_login3_invoker = createInvoker(
+    Auth_4.login,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Auth",
+      "login",
+      Nil,
+      "POST",
+      this.prefix + """login""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:14
+  private[this] lazy val controllers_Auth_logout4_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("logout")))
+  )
+  private[this] lazy val controllers_Auth_logout4_invoker = createInvoker(
+    Auth_4.logout,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Auth",
+      "logout",
+      Nil,
+      "GET",
+      this.prefix + """logout""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:16
+  private[this] lazy val controllers_HomeController_testCookie5_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("testcookie")))
+  )
+  private[this] lazy val controllers_HomeController_testCookie5_invoker = createInvoker(
+    HomeController_1.testCookie,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "testCookie",
+      Nil,
+      "GET",
+      this.prefix + """testcookie""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:19
+  private[this] lazy val controllers_Musicas_get6_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("musicas/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_Musicas_get0_invoker = createInvoker(
-    Musicas_3.get(fakeValue[Long]),
+  private[this] lazy val controllers_Musicas_get6_invoker = createInvoker(
+    Musicas_5.get(fakeValue[Long]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Musicas",
@@ -86,12 +208,12 @@ class Routes(
     )
   )
 
-  // @LINE:9
-  private[this] lazy val controllers_Musicas_meta1_route = Route("GET",
+  // @LINE:22
+  private[this] lazy val controllers_Musicas_meta7_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("musicas/meta/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_Musicas_meta1_invoker = createInvoker(
-    Musicas_3.meta(fakeValue[Long]),
+  private[this] lazy val controllers_Musicas_meta7_invoker = createInvoker(
+    Musicas_5.meta(fakeValue[Long]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Musicas",
@@ -104,12 +226,12 @@ class Routes(
     )
   )
 
-  // @LINE:12
-  private[this] lazy val controllers_Musicas_checkForUpdates2_route = Route("GET",
+  // @LINE:25
+  private[this] lazy val controllers_Musicas_checkForUpdates8_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("musicas/checkforupdates/"), DynamicPart("versaoAtualizacaoBancoCliente", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_Musicas_checkForUpdates2_invoker = createInvoker(
-    Musicas_3.checkForUpdates(fakeValue[Int]),
+  private[this] lazy val controllers_Musicas_checkForUpdates8_invoker = createInvoker(
+    Musicas_5.checkForUpdates(fakeValue[Int]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Musicas",
@@ -122,12 +244,12 @@ class Routes(
     )
   )
 
-  // @LINE:15
-  private[this] lazy val controllers_Musicas_tracks3_route = Route("GET",
+  // @LINE:28
+  private[this] lazy val controllers_Musicas_tracks9_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("musicas/tracks/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_Musicas_tracks3_invoker = createInvoker(
-    Musicas_3.tracks(fakeValue[Long]),
+  private[this] lazy val controllers_Musicas_tracks9_invoker = createInvoker(
+    Musicas_5.tracks(fakeValue[Long]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Musicas",
@@ -140,12 +262,12 @@ class Routes(
     )
   )
 
-  // @LINE:18
-  private[this] lazy val controllers_Musicas_valorMoedas4_route = Route("GET",
+  // @LINE:31
+  private[this] lazy val controllers_Musicas_valorMoedas10_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("musicas/valormoedas/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_Musicas_valorMoedas4_invoker = createInvoker(
-    Musicas_3.valorMoedas(fakeValue[Long]),
+  private[this] lazy val controllers_Musicas_valorMoedas10_invoker = createInvoker(
+    Musicas_5.valorMoedas(fakeValue[Long]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Musicas",
@@ -158,11 +280,11 @@ class Routes(
     )
   )
 
-  // @LINE:21
-  private[this] lazy val controllers_HomeController_index5_route = Route("GET",
+  // @LINE:34
+  private[this] lazy val controllers_HomeController_index11_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix)))
   )
-  private[this] lazy val controllers_HomeController_index5_invoker = createInvoker(
+  private[this] lazy val controllers_HomeController_index11_invoker = createInvoker(
     HomeController_1.index,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -176,11 +298,11 @@ class Routes(
     )
   )
 
-  // @LINE:23
-  private[this] lazy val controllers_CountController_count6_route = Route("GET",
+  // @LINE:36
+  private[this] lazy val controllers_CountController_count12_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("count")))
   )
-  private[this] lazy val controllers_CountController_count6_invoker = createInvoker(
+  private[this] lazy val controllers_CountController_count12_invoker = createInvoker(
     CountController_0.count,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -194,11 +316,11 @@ class Routes(
     )
   )
 
-  // @LINE:25
-  private[this] lazy val controllers_AsyncController_message7_route = Route("GET",
+  // @LINE:38
+  private[this] lazy val controllers_AsyncController_message13_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("message")))
   )
-  private[this] lazy val controllers_AsyncController_message7_invoker = createInvoker(
+  private[this] lazy val controllers_AsyncController_message13_invoker = createInvoker(
     AsyncController_2.message,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -212,12 +334,12 @@ class Routes(
     )
   )
 
-  // @LINE:28
-  private[this] lazy val controllers_Assets_versioned8_route = Route("GET",
+  // @LINE:41
+  private[this] lazy val controllers_Assets_versioned14_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_versioned8_invoker = createInvoker(
-    Assets_4.versioned(fakeValue[String], fakeValue[Asset]),
+  private[this] lazy val controllers_Assets_versioned14_invoker = createInvoker(
+    Assets_6.versioned(fakeValue[String], fakeValue[Asset]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Assets",
@@ -234,57 +356,93 @@ class Routes(
   def routes: PartialFunction[RequestHeader, Handler] = {
   
     // @LINE:6
-    case controllers_Musicas_get0_route(params) =>
-      call(params.fromPath[Long]("id", None)) { (id) =>
-        controllers_Musicas_get0_invoker.call(Musicas_3.get(id))
+    case controllers_ServicesController_services0_route(params) =>
+      call { 
+        controllers_ServicesController_services0_invoker.call(ServicesController_3.services)
       }
   
     // @LINE:9
-    case controllers_Musicas_meta1_route(params) =>
-      call(params.fromPath[Long]("id", None)) { (id) =>
-        controllers_Musicas_meta1_invoker.call(Musicas_3.meta(id))
-      }
-  
-    // @LINE:12
-    case controllers_Musicas_checkForUpdates2_route(params) =>
-      call(params.fromPath[Int]("versaoAtualizacaoBancoCliente", None)) { (versaoAtualizacaoBancoCliente) =>
-        controllers_Musicas_checkForUpdates2_invoker.call(Musicas_3.checkForUpdates(versaoAtualizacaoBancoCliente))
-      }
-  
-    // @LINE:15
-    case controllers_Musicas_tracks3_route(params) =>
-      call(params.fromPath[Long]("id", None)) { (id) =>
-        controllers_Musicas_tracks3_invoker.call(Musicas_3.tracks(id))
-      }
-  
-    // @LINE:18
-    case controllers_Musicas_valorMoedas4_route(params) =>
-      call(params.fromPath[Long]("id", None)) { (id) =>
-        controllers_Musicas_valorMoedas4_invoker.call(Musicas_3.valorMoedas(id))
-      }
-  
-    // @LINE:21
-    case controllers_HomeController_index5_route(params) =>
+    case controllers_Auth_loginSecure1_route(params) =>
       call { 
-        controllers_HomeController_index5_invoker.call(HomeController_1.index)
+        controllers_Auth_loginSecure1_invoker.call(Auth_4.loginSecure)
       }
   
-    // @LINE:23
-    case controllers_CountController_count6_route(params) =>
+    // @LINE:11
+    case controllers_Auth_obterMusiquinhas2_route(params) =>
       call { 
-        controllers_CountController_count6_invoker.call(CountController_0.count)
+        controllers_Auth_obterMusiquinhas2_invoker.call(Auth_4.obterMusiquinhas)
+      }
+  
+    // @LINE:13
+    case controllers_Auth_login3_route(params) =>
+      call { 
+        controllers_Auth_login3_invoker.call(Auth_4.login)
+      }
+  
+    // @LINE:14
+    case controllers_Auth_logout4_route(params) =>
+      call { 
+        controllers_Auth_logout4_invoker.call(Auth_4.logout)
+      }
+  
+    // @LINE:16
+    case controllers_HomeController_testCookie5_route(params) =>
+      call { 
+        controllers_HomeController_testCookie5_invoker.call(HomeController_1.testCookie)
+      }
+  
+    // @LINE:19
+    case controllers_Musicas_get6_route(params) =>
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_Musicas_get6_invoker.call(Musicas_5.get(id))
+      }
+  
+    // @LINE:22
+    case controllers_Musicas_meta7_route(params) =>
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_Musicas_meta7_invoker.call(Musicas_5.meta(id))
       }
   
     // @LINE:25
-    case controllers_AsyncController_message7_route(params) =>
-      call { 
-        controllers_AsyncController_message7_invoker.call(AsyncController_2.message)
+    case controllers_Musicas_checkForUpdates8_route(params) =>
+      call(params.fromPath[Int]("versaoAtualizacaoBancoCliente", None)) { (versaoAtualizacaoBancoCliente) =>
+        controllers_Musicas_checkForUpdates8_invoker.call(Musicas_5.checkForUpdates(versaoAtualizacaoBancoCliente))
       }
   
     // @LINE:28
-    case controllers_Assets_versioned8_route(params) =>
+    case controllers_Musicas_tracks9_route(params) =>
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_Musicas_tracks9_invoker.call(Musicas_5.tracks(id))
+      }
+  
+    // @LINE:31
+    case controllers_Musicas_valorMoedas10_route(params) =>
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_Musicas_valorMoedas10_invoker.call(Musicas_5.valorMoedas(id))
+      }
+  
+    // @LINE:34
+    case controllers_HomeController_index11_route(params) =>
+      call { 
+        controllers_HomeController_index11_invoker.call(HomeController_1.index)
+      }
+  
+    // @LINE:36
+    case controllers_CountController_count12_route(params) =>
+      call { 
+        controllers_CountController_count12_invoker.call(CountController_0.count)
+      }
+  
+    // @LINE:38
+    case controllers_AsyncController_message13_route(params) =>
+      call { 
+        controllers_AsyncController_message13_invoker.call(AsyncController_2.message)
+      }
+  
+    // @LINE:41
+    case controllers_Assets_versioned14_route(params) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned8_invoker.call(Assets_4.versioned(path, file))
+        controllers_Assets_versioned14_invoker.call(Assets_6.versioned(path, file))
       }
   }
 }

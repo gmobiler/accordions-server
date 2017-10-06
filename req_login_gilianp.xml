@@ -1,0 +1,48 @@
+<RestClientRequest>
+  <option name="biscuits">
+    <list>
+      <Biscuit>
+        <option name="date" value="-1" />
+        <option name="domain" value="localhost" />
+        <option name="name" value="PLAY_SESSION" />
+        <option name="path" value="/" />
+        <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7InVzZXJzZXNzaW9uIjoiZ2lsaWFucEBnbWFpbC5jb20ifSwibmJmIjoxNTA3MzA5NDUwLCJpYXQiOjE1MDczMDk0NTB9.x3ZdBWz1eMRFbjZWlclW7r1r0DAvDQLCk8cft91FN2U" />
+      </Biscuit>
+      <Biscuit>
+        <option name="date" value="-1" />
+        <option name="domain" value="localhost" />
+        <option name="name" value="SV" />
+        <option name="path" value="/" />
+        <option name="value" value="LYiK-F5V}5" />
+      </Biscuit>
+    </list>
+  </option>
+  <option name="httpMethod" value="POST" />
+  <option name="urlBase" value="http://localhost:9000" />
+  <option name="urlPath" value="/services" />
+  <option name="headers">
+    <list>
+      <KeyValuePair>
+        <option name="key" value="Accept" />
+        <option name="value" value="*/*" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Cache-Control" />
+        <option name="value" value="no-cache" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Content-Type" />
+        <option name="value" value="text/plain" />
+      </KeyValuePair>
+    </list>
+  </option>
+  <option name="parameters">
+    <list />
+  </option>
+  <option name="parametersEnabled" value="true" />
+  <option name="haveTextToSend" value="true" />
+  <option name="haveFileToSend" value="false" />
+  <option name="isFileUpload" value="false" />
+  <option name="textToSend" value="D6W8?cnqvSE4{3YWzc5*+uUjqYm+uUjKpOHxSTKpOxd=Ju}l}KcE|9BwWi=KpON0CJKpOM_ZsqYmnqvShPQnqvSOgHwWi=E4{KVQ-7msoKPFLYi+KjL1GRJFPxE4{oqQgy32lPobJCGxmDyQTvJFPxItrkJXQa4g+KjL1GRJFPx|ZDAT2ru}lqPz4!QZe6W6_nm$vVXtjwYr{wTVtKy1rBGWz_mMyyb2*iJCZ7K-F5BGWe6W6DW?xd=Ji3-+uUjbxT+KjL1GRJFPx-qm6Hy#Va0u?kz!PdKy1r|i*IVpQd*y+KjL1GR}5i3yybxd=JfxB3QGroYOcbxYKpOv#|j" />
+  <option name="filesToSend" value="" />
+</RestClientRequest>
